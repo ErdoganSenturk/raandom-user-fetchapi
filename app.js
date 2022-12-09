@@ -8,6 +8,9 @@ const userUsername = document.querySelector(".username");
 const userIdsi = document.querySelector(".idsi"); 
 const userGenerate = document.querySelector(".btn"); 
 
+window.onload = () => {
+  datacek()
+}
 
 userGenerate.addEventListener("click", () => {
   const datacek = () => {
@@ -27,7 +30,7 @@ userGenerate.addEventListener("click", () => {
 
 
   const gitUserData = (data) => {
-    console.log(data);
+    // console.log(data);
     userPicture.src = data.results[0].picture.medium
     userfirstname.innerText = `Name : ${data.results[0].name.first}`
     userlastname.innerText =`${data.results[0].name.last}` ;
